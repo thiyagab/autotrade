@@ -7,8 +7,8 @@ Usage:
 
 EQUITY:
 
-python quotefromnse.py <symbol>
+python quotefromnse.py \<symbol\>
 
 FUTURES:
 
-python futquotefromnse.py <symbol> <expiry>
+python futquotefromnse.py \<symbol\> \<expiry\>
