@@ -11,4 +11,4 @@ python quotefromnse.py \<symbol\>
 
 FUTURES:
 
-python futquotefromnse.py \<symbol\> \<expiry\>
+python quotefromnse.py \<symbol\> \<expiry\>
