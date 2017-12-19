@@ -4,7 +4,7 @@ Simple scripts to get realtime quote from NSE, and trade in zerodha
 Note: This is NOT a Stable script, NSE may anytime change the way quote is fetched.
 
 
-# GET QUOTE
+# get quote
 Usage:
 
 EQUITY:
