@@ -28,9 +28,9 @@ def alerts(sessionid) :
 
 if __name__ == '__main__':
     if len (sys.argv) < 2 :
-            print("Usage: \n","python alerts <session>")
+            print("Usage: \n","python alerts.py <session>")
             sys.exit(1)
             
     response=alerts(sys.argv[1])
     
-    print(response['data'])
+    print(response)

@@ -18,7 +18,7 @@ def orders(sessionid):
 
 if __name__ == '__main__':
     if len (sys.argv) < 2 :
-            print("Usage: \n","python orders <session>")
+            print("Usage: \n","python orders.py <session>")
             sys.exit(1)
           
     response=orders(sys.argv[1])  

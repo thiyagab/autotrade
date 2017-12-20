@@ -35,7 +35,7 @@ def dellastorder(sessionid) :
     
     
 if len (sys.argv) < 2 :
-        print("Usage: \n","python delorder <session> <orderid>\n","or to delete last order","\npython delorder <session>")
+        print("Usage: \n","python delorder.py <session> <orderid>\n","or to delete last order","\npython delorder.py <session>")
         sys.exit(1)
         
     

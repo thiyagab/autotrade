@@ -19,7 +19,6 @@ headers = {
     'Accept': "application/json, text/plain, */*",
     'Cache-Control': "no-cache",
     'Referer': "https://kite.zerodha.com/dashboard/?login=true",
-    'Cookie': "session=e4626fc7-dcc8-4ba3-8052-cbf9fa5e0363",
     'Connection': "keep-alive",
     'If-Modified-Since': "0"
     }
@@ -36,6 +35,10 @@ def senddelrequest (url, querystring):
 def sendpostrequest (url, payload):
     response = requests.request("POST", url, data=json.dumps(payload), headers=headers) 
     return  parseresponse( response );
+
+def sendpostformrequest (url, payload):
+    response = requests.request("POST", url, data=payload, headers=headers) 
+    return response;
 
 def parseresponse ( response ):
         text = response.text.strip()
