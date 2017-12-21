@@ -15,19 +15,25 @@ url = "https://kite.zerodha.com/api/orders"
 def placeorder(clientid,sessionid,symbol,transactiontype,qty,price):  
     common.headers['Cookie']='session='+sessionid
     payload = {
-            "exchange":"NFO","order_type":"LIMIT",
-            "product":"NRML","validity":"DAY","disclosed_quantity":"0",
+            "exchange":"NSE","order_type":"LIMIT",
+            "product":"CNC","validity":"DAY","disclosed_quantity":"0",
             "trigger_price":"0","squareoff_value":"0","squareoff":"0","stoploss_value":"0",
             "stoploss":"0","trailing_stoploss":"0","variety":"regular"
             }
-    
+    symbol = symbol.upper().strip()
     payload['tradingsymbol']= symbol
     payload['transaction_type']= transactiontype
     payload['quantity']= qty
     payload['price']= price
     payload['client_id']= clientid 
+    
+    if symbol.endswith('FUT'):
+        payload['exchange']='NFO'
+        payload['product']='NRML'
+    print ('payload',payload)
     response=common.sendpostrequest(url,payload)  
     print( response )
+    return response
 
 
 if __name__ == '__main__':  
